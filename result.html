@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta title="반려견 성격 테스트" content="DPTT, initial-scale=1.0">
+  <title>반려견 성격 테스트</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="result.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <script src="main.js"></script>
+  <script src="result.js"></script>
+</head>
+
+<body>
+<!-- 메뉴 -->
+  <div class="menu">
+    <div class="m_item1"><img src="image/pet.jpg" alt="기업 로고" class="UnP_logo" onclick="clickLogo()"></div>
+    <div class="m_item2">
+      <div class="grid1"></div>
+      <div class="grid2" onclick="clickTest()"><span>성격 테스트</span></div>
+      <div class="grid3" onclick="clickType()"><span>유형</span></div>
+      <div class="grid4"></div>
+    </div>
+    <div class="m_item3"><a href="https://www.naver.com">문의</a></div>
+  </div>
+
+  <!-- 메인 설명 -->
+  <div class="header_area" id="dd">
+    <div class="resultArea">
+      <div class="petImageArea">
+        <div class="pet-div">
+          <img src="image/EDR.JPG" alt="유형 이미지" class="type_logo" id="type_Image">
+          <p class="typeName" id="type_Name"></p>
+          <div class="resultbar_area">
+            <div class="result_graph">
+              <div><p id="textForIE"></p></div>
+              <div class="graph_item1">  <!-- 성향 결과 그래프 -->
+                <div class="result_bar">
+                  <div class="progress" id="graphForIE" style="width: 0;"></div> <!-- 초기 진행률은 0으로 설정 -->
+                  <div class="resultGraph_text" id="scoreForIE"></div> <!-- 초기 진행률 텍스트 설정 -->
+                </div>
+              </div>
+              <div class="graph_item2"></div>
+            </div>
+            <div class="result_graph">
+              <div><p id="textForDL"></p></div>
+              <div class="graph_item1">
+                <div class="result_bar">
+                  <div class="progress" id="graphForDL" style="width: 0;"></div> <!-- 초기 진행률은 0으로 설정 -->
+                  <div class="resultGraph_text" id="scoreForDL"></div> <!-- 초기 진행률 텍스트 설정 -->
+                </div>
+              </div>
+              <div class="graph_item2"></div>
+            </div>
+            <div class="result_graph">
+              <div><p id="textForRE"></p></div>
+              <div class="graph_item1">
+                <div class="result_bar">
+                  <div class="progress" id="graphForRE" style="width: 0;"></div> <!-- 초기 진행률은 0으로 설정 -->
+                  <div class="resultGraph_text" id="scoreForRE"></div> <!-- 초기 진행률 텍스트 설정 -->
+                </div>
+              </div>
+              <div class="graph_item2"></div>
+            </div>
+          </div>
+          
+          <p class ="type_explanation" id="typeExplanation">dd</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
