@@ -2,36 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta title="반려견 성격 테스트" content="DPTT, initial-scale=1.0">
-  <title>반려견 성격 테스트</title>
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="result.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>강아지 성격 검사 결과</title>
+  <link rel="stylesheet" href="/assets/index.css">
+  <link rel="stylesheet" href="/assets/result.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-  <script src="main.js"></script>
-  <script src="result.js"></script>
+  <script src="/assets/index.js"></script>
+  <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <script type="text/JavaScript" src="/assets/result.js"></script> <!-- 외부의 JavaScript 파일을 로드 -->
 </head>
 
-<body>
+
+
+<header>
 <!-- 메뉴 -->
   <div class="menu">
-    <div class="m_item1"><img src="image/pet.jpg" alt="기업 로고" class="UnP_logo" onclick="clickLogo()"></div>
+    <div class="m_item1"><img src="/image/pet.jpg" alt="기업 로고" class="UnP_logo" onclick="goToPage('/dptt')"></div>
     <div class="m_item2">
       <div class="grid1"></div>
-      <div class="grid2" onclick="clickTest()"><span>성격 테스트</span></div>
-      <div class="grid3" onclick="clickType()"><span>유형</span></div>
+      <div class="grid2" onclick="goToPage('/dptt')"><span>성격 테스트</span></div>
+      <div class="grid3" onclick="goToPage('/type')"><span>유형</span></div>
       <div class="grid4"></div>
     </div>
-    <div class="m_item3"><a href="https://www.naver.com">문의</a></div>
+    <div class="m_item3" onclick="goToPage('/dptt')"><span>문의</span></div>
   </div>
+</header>
 
+<body>
   <!-- 메인 설명 -->
   <div class="header_area" id="dd">
     <div class="resultArea">
       <div class="petImageArea">
         <div class="pet-div">
-          <img src="image/EDR.JPG" alt="유형 이미지" class="type_logo" id="type_Image">
+          <img alt="유형 이미지" class="type_logo" id="type_Image">
           <p class="typeName" id="type_Name"></p>
           <div class="resultbar_area">
             <div class="result_graph">
@@ -65,8 +70,11 @@
               <div class="graph_item2"></div>
             </div>
           </div>
-          
-          <p class ="type_explanation" id="typeExplanation">dd</p>
+          <p class ="type_explanation" id="typeExplanation"></p>  <!-- 결과값에 따라 값 수정 -->
+          <a id="kakaotalk-sharing-btn" href="javascript:;">
+            <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+              alt="카카오톡 공유" onclick="sendLinkDefault()">
+          </a>
         </div>
       </div>
     </div>
